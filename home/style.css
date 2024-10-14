@@ -1,0 +1,375 @@
+
+body{
+    margin: 0px;
+    background: linear-gradient(45deg, #090724,#0b2921); 
+    position: relative;
+}
+/* header part */
+#header_box{
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    text-decoration: none;
+    color: #777;
+}
+.header_logo{
+    width: 200px;
+    font-size: 20px;
+    display: flex;
+    margin: 8px;
+}    
+.header_logo p{
+    width: 100px;
+    margin: 8px;
+    margin-left: 0;
+    font-size: 30px;
+    color: #34e451;
+}
+.header_logo img {
+    width: 50px;
+    height: 60px;
+    display: flex;
+    color: #34e451;
+    margin-right: 0;
+}    
+.navbar_menu ul{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: #666;*/
+ }
+.navbar_menu li{
+    width: 60px;
+    padding: 8px 40px;
+    list-style: none;   
+    font-size: 13px;
+    color: #fff;
+}
+.navbar_menu li a:hover{
+    color:  #34e451;
+}
+/* search box */
+.search_box input{
+    background: url(/home/img/icon/search_FILL0_wght400_GRAD0_opsz24.png\ \(2\).png)
+    no-repeat 5px center; 
+    width: 800px;
+    height: 20px;
+    background-size: 20px;
+    padding-left: 40px;
+    border-radius: 4px;
+    margin: 25px ;
+    color: #777;
+}
+/* login */
+.header_login{
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 8px;
+ 
+}
+.header_login p{
+    width: 60px;
+    height: 20px;
+    border-radius: 4px;
+    text-align: center;
+    padding-top: 3px;
+    color: #fff;
+    font-size: 12px;
+    /* border: 1px solid #666; */
+ } 
+.header_login img{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    font-size: 12px;
+    color: #777;
+    margin-top: 3px;
+ }
+    
+/* Discover daily */
+#main_date{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    /* border: 1px solid #d0f175; */
+}
+#main_date p{
+    margin: 0 30px;
+    padding-top: 10px;
+    color:#fff;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+#main_date {
+    display: flex;
+    align-items: center;
+}
+/* mini_calendar */
+.mini_calendar {
+    margin-left: 10px; /* 필요한 경우 여백 조정 */
+
+}
+
+.calendar {
+    width:50px;
+    height: 50px;
+    padding: 0px;
+    text-align: center;
+    border-radius: 10px;
+    /* border: 1px solid #c02525; */
+}
+
+.top {
+    width: 50px;
+    height: 20px;
+    background-color: #ff2525bb;
+    font-weight: bold;
+    /* border-radius: 10px 10px 0 0; */
+}
+
+.bottom {
+    /* font-weight: bold; */
+    width: 50px;
+    height: 30px;
+    background-color: #fff;
+    border-radius:0 0 10px 10px;
+}
+    
+ .top #month  {
+    width: 50px;
+    height: 20px;
+    font-size: 10px;
+    color: #fff;
+    margin: 0 auto;
+    padding-top: 2px;
+    display: block;
+     /* border: 1px solid #2825c0; */
+     /* line-height: 90px; */
+    }  
+.bottom #date{
+    width: 50px;
+    height: 20px;
+    font-size: 20px;
+    margin: 0 auto;
+    color: #353434;
+    padding-top: 5px;
+    display: block;
+    /* border: 1px solid #2825c0; */
+
+}  
+/* 오늘의 트렌드 Slide box  */
+.slide_section{
+ width: 100%;
+ height: 250px;
+ display: flex;
+ flex-direction:wrap;
+ justify-content: center;
+ align-items: center;
+ /* border: 1px solid #fff; */
+ 
+}
+/* insert img  */
+.slide_1{
+    width: 350px;
+    height: 165px;
+    border-radius: 10px;
+    margin: 15px 20px;
+    position: relative;
+    background:url(/img/slidebox/시즌-2.webp.webp) no-repeat center center/cover;
+    opacity: 1;
+    /* border: 1px solid #fff; */
+}
+.slide_2{
+    width: 350px;
+    height: 165px;
+    border-radius: 10px;
+    margin: 15px 20px;
+    position: relative;
+    background:url(/img/slidebox/다다단-1.webp.webp) no-repeat center center/cover;
+    opacity: 1;
+    /* border: 1px solid #fff; */
+}
+.slide_3{
+    width: 350px;
+    height: 165px;
+    border-radius: 10px;
+    margin: 15px 20px;
+    position: relative;
+    background:url(/img/slidebox/다패-1.webp.webp) no-repeat center center/cover;
+    opacity: 1;
+    /* border: 1px solid #fff; */
+}
+.slide_4{
+    width: 350px;
+    height: 165px;
+    border-radius: 10px;
+    margin: 15px 20px;
+    position: relative;
+    background:url(/img/slidebox/굿럭-1.webp.webp) no-repeat center center/cover;
+    opacity: 1;
+    /* border: 1px solid #fff; */
+}
+
+.today_trend {
+    color:#fff;
+    left:5px;
+}
+
+.today_trend li{
+    list-style: none;
+    position: absolute;
+    top:-5px;
+    right: -5px;
+    width: 115px;
+    height: 25px;
+    border-radius: 0 20px ;
+    background-color: #fff;
+    color: #0c0c0c;
+    text-align: center;
+    padding-top: 7px;
+    font-size: 14px;
+    /* margin: 0 10px 150px 160px; */
+    /* border: 1px solid #fff; */
+}
+/* 2024.1시간 7분 */
+.today_trend p{
+    font-size: 12px;
+    padding-top:  20px;
+}
+/* 타이틀  */
+.today_trend h3{
+    margin-top:  0;
+}
+/* (시즌)  */
+.today_trend h5{
+    font-size: 12px;
+    margin-top:  0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+/* 지금 시청하기 */
+ .slide_1 .watching  a,
+ .slide_2 .watching  a,
+ .slide_3 .watching  a,
+ .slide_4 .watching  a {
+    width: 320px;
+    height: 28px;
+    border-radius: 5px ;
+    color:#fff;
+    font-size: 12px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    background-color: #454c57;
+}
+
+/* swiper slider */
+
+.swiper{
+    /* background: linear-gradient(45deg, #090724,#0b2921);  */
+    width:80%;
+    right: 0;
+    height: 350px;
+    /* border: 1px solid #8a83e4; */
+    margin-bottom: 10px;
+  }
+    .swiper h2 {
+      margin-top: 0;
+      color: #fff;
+    }
+  .swiper-wrapper{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid #fc3030; */
+  }
+   .bg1,
+   .bg2,
+   .bg3,
+   .bg4,
+   .bg5,
+   .bg6,
+   .bg7,
+   .bg8,
+   .bg9,
+   .bg10{
+    width: 100px;
+    border-radius: 6px;
+    /* border: 1px solid #396d6d; */
+    /* object-fit: cover; */
+    
+  }
+  .bg1{background: url(/img/swiper/k1.webp);}
+  .bg2{background: url(img/swiper/k2.webp);}
+  .bg3{background: url(img/swiper/k3.webp);}
+  .bg4{background: url(img/swiper/k4.webp);}
+  .bg5{background: url(img/swiper/k1.webp);}
+  .bg6{background: url(img/swiper/k2.webp);}
+  .bg7{background: url(img/swiper/k3.webp);}
+  .bg8{background: url(img/swiper/k5.webp);}
+  .bg9{background: url(img/swiper/k4.webp);}
+  .bg10{background: url(img/swiper/k5.webp);}
+  .bg11{background: url(img/swiper/h1.webp)}
+  .bg12{background: url(img/swiper/h2.webp)}
+  .bg13{background: url(img/swiper/h3.webp)}
+  .bg14{background: url(img/swiper/h4.webp)}
+  .bg15{background: url(img/swiper/h5.webp)}
+  .bg16{background: url(img/swiper/h3.webp)}
+  .bg17{background: url(img/swiper/h7.webp)}
+  .bg18{background: url(img/swiper/h8.webp)}
+  .bg19{background: url(img/swiper/h2.webp)}
+  .bg20{background: url(img/swiper/h1.webp)}
+  .bg21{background: url(img/swiper/c1.webp)}
+  .bg22{background: url(img/swiper/c2.webp)}
+  .bg23{background: url(img/swiper/c3.webp)}
+  .bg24{background: url(img/swiper/c4.webp)}
+  .bg25{background: url(img/swiper/c6.webp)}
+  .bg26{background: url(img/swiper/c3.webp)}
+  .bg27{background: url(img/swiper/c1.webp)}
+  .bg28{background: url(img/swiper/c3.webp)}
+  .bg29{background: url(img/swiper/c2.webp)}
+  .bg30{background: url(img/swiper/a1.webp)}
+  .bg31{background: url(img/swiper/a2.webp)}
+  .bg32{background: url(img/swiper/a3.webp)}
+  .bg33{background: url(img/swiper/a4.webp)}
+  .bg34{background: url(img/swiper/a5.webpwebp)}
+  .bg35{background: url(img/swiper/a2.webp)}
+  .bg36{background: url(img/swiper/a1.webp)}
+  .bg37{background: url(img/swiper/a3.webp)}
+  .bg38{background: url(img/swiper/a4.webp)}
+  .bg39{background: url(img/swiper/a5.webp)}
+  .bg40{background: url(img/swiper/a1.webp)}
+  .bg41{background: url(img/swiper/m1.webp)}
+  .bg42{background: url(img/swiper/m2.webp)}
+  .bg43{background: url(img/swiper/m3.webp)}
+  .bg44{background: url(img/swiper/m4.webp)}
+  .bg45{background: url(img/swiper/m5.webp)}
+  .bg46{background: url(img/swiper/m1.webp)}
+  .bg47{background: url(img/swiper/m2.webp)}
+  .bg48{background: url(img/swiper/m3.webp)}
+  .bg49{background: url(img/swiper/m4.webp)}
+  .bg50{background: url(img/swiper/m5.webp)}
+  
+  
+
+/* 미디어 쿼리 */
+/* 화면 너비가 0~1280px
+@media (max-width: 1280px){
+body{ background: #ac0c61;}
+}
+@media(max-width: 1024px){
+body{background: #6e28c4;}
+}
+@media(max-width : 960px){
+body{background: #25c9df;}
+}
+@media(max-width: 768px){
+body{background: #3cbe22;}
+}
+@media(max-width: 568px){
+body{background: #ddb5f5;}
+} */
