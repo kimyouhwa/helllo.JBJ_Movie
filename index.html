@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="/Detail/script.js">
+    <link rel="stylesheet" href="/Detail/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <!-- header repeat -->
+    <header id="header_box">
+    </div>
+    <div class="header_logo"><img src="/home/img/icon/header_logo_green.png.png" alt="헤더로고 "> <p>JBJ_MOViE</p>
+        <div class="navbar_menu">
+          <ul>
+            <li><a href="">홈 </a></li>
+            <li><a href="">신작 </a></li>
+            <li><a href="">인기 </a></li>
+            <li><a href="">장르 </a></li>
+           </ul>
+        </div>
+        <div class="search_box">
+            <input type="text" placeholder="what are you looking for? ">
+            
+        </div>
+        <div class="header_login">
+            <a href="#">로그인</a>
+            <img src="img/icon/menu_hamburger_gray.png.png" alt=" ">
+        </div>
+   </header>
+   <!-- header repeat end -->
+    <!--description   -->
+<div id="des_container">
+  <div class="des_title">
+    <h2>지옥에서 온 판사</h2>
+    <ul>
+        <li ><img src="/Detail/img/icon/tag_cmmg_19.svg" alt=""></li>
+        <li>2024</li>
+        <li>드라마 </li>
+        <li>50분</li>
+    </ul>
+ </div>
+  <div class="watch_select">
+<button id="purchaseBtn">play</button>
+       <span id="favoriteBtn" onclick="toggleFavorite()">
+        <img src="/Detail/img/icon/favorite.svg">
+            <p>&nbsp&nbsp찜 </p> 
+        </span> 
+        <span id="shareBtn"><img src="/Detail/img/icon/share.svg"> 
+           <p>&nbsp공유</p>
+        </span> 
+  </div>
+  <!-- share popup -->
+  <div id="sharePopup" class="share-popup" style="display: none;">
+      <span class="share-option" onclick="shareOnFacebook()">
+          <img src="/Detail/img/icon/circle-facebook .svg" alt="Facebook">
+         
+      </span>
+      <span class="share-option" onclick="shareOnKakaoTalk()">
+          <img src="/Detail/img/icon/circle-kakao .svg" alt="KakaoTalk">
+          
+      </span>
+      <span class="share-option" onclick="copyLink()">
+          <img src="/Detail/img/icon/circle-url .svg" alt="Copy">
+         
+      </span>
+  </div>
+</div>
+<!--  시놉시스  -->
+<div class="tb_container">
+  <div id="tb_container">
+    <button id="toggleButton"><span>더보기</span><img src="/Detail/img/icon/down_arrow.svg"></button>
+    <div id="dropdown" class="dropdown-content" >
+        <p>Lorem, ipsum dolor sit amet consectetur<br> 
+            adipisicing elit. Maiores,<br>
+            sequi non quasi e<br>
+            os obcaecati, impedit, ipsa <br>
+            repudiandae assu<br>
+            menda ducimus accusamus <br>
+             molestiae minus asper<br>
+            iores! Alias maiores <br>
+            ut praesentium officia, i<br>
+            llum ducimus.  Lorem, ipsum<br> 
+            dolor sit amet consllum ducimus.<br>
+            Lorem, ipsum dolor sit amet cons<br>
+            ectetur adipisicing elit. Maiores,<br>
+            sequi non quasi eos obcaecati,<br>
+            impedit, ipsa repudiandae assu<br>
+            menda ducimus accusamus molestiae<br>
+             minus asperiores! <br>
+             Alias maiores ut praesentium officia,<br>
+             illum ducimus
+            si eos obcaecati,<br>
+             impedit, ipsa repudiandae assu<br>
+            menda ducimus accusamus molestiae<br>
+             minus asperiores<br>
+            ! Alias maiores ut<br> 
+            praesentium officia, illum ducimus. </p>
+        <button id="closeButton"><span>닫기</span><img src="/Detail/img/icon/up_arrow.svg" alt=""></button>
+    </div>
+  </div>
+<div class="des_poster"><img src="/Detail/img/Des_img/1280.png" alt=""></div>
+
+</div>
+<!--js시놉시스 -->
+<script>
+    document.getElementById('toggleButton').addEventListener('click', function() {
+    const dropdown = document.getElementById('dropdown');
+    dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
+});
+
+document.getElementById('closeButton').addEventListener('click', function() {
+    document.getElementById('dropdown').style.display = 'none';
+});
+</script>
+<!-- 더보기 창  -->
+<!-- <script>
+const textWrapper = document.querySelector('.text-wrapper');
+const text = document.querySelector('.text');
+const moreText = document.querySelector('#toggleButton');
+const lessText = document.querySelector('#closeButton');        
+
+// 더보기 텍스트 클릭시 이벤트
+moreText.addEventListener('click', () => {
+
+moreText.style.display = 'none'; // 더보기 텍스트 삭제
+lessText.style.display = 'inline-block'; // 줄이기 텍스트 표시
+text.style.display = 'inline-block'; // 텍스트의 속성을 -webkit-box에서 일반 inline-block 으로 변경
+});
+
+// 줄이기 텍스트 클릭시 이벤트
+lessText.addEventListener('click', () => {
+
+lessText.style.display = 'none'; // 줄이기 텍스트 삭제
+moreText.style.display = 'inline-block'; // 더보기 텍스트 표시
+text.style.display = '-webkit-box'; // 텍스트의 속성을 다시 -webkit-box로 표시
+});
+</script> -->
+<!-- share popup-->
+<script>
+    document.getElementById("shareBtn").onclick = function() {
+    const popup = document.getElementById("sharePopup");
+    popup.style.display = popup.style.display === "none" ? "block" : "none";
+};
+
+function shareOnFacebook() {
+    const url = 'https://www.facebook.com'; // 공유할 URL
+    window.open(`https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNzI5MDEwODU5LCJjYWxsc2l0ZV9pZCI6MzgxMjI5MDc5NTc1OTQ2fQ%3D%3D&next=${encodeURIComponent(url)}`, '_blank');
+}
+
+function shareOnKakaoTalk() {
+    const url = 'https://accounts.kakao.com/login/'; // 공유할 URL
+    window.open(`https://accounts.kakao.com/login/?continue=https%3A%2F%2Fcs.kakao.com%2Fhelps%3Fservice%3D8#login'=${encodeURIComponent(url)}`, '_blank');
+function copyLink() {
+    const url = 'http://127.0.0.1:5500/Detail/index.html'; // 복사할 URL
+    navigator.clipboard.writeText(url).then(() => {
+        alert('링크가 복사되었습니다!');
+    });
+}
+function toggleFavorite() {
+            const favoriteBtn = document.getElementById("favoriteBtn");
+            favoriteBtn.classList.toggle("favorite-selected");
+            const favoriteIcon = document.getElementById("favoriteIcon");
+            favoriteIcon.src = favoriteBtn.classList.contains("favorite-selected") 
+                ? '/img/icon/favorite-selected.svg' // 선택된 아이콘 경로
+                : '/img/icon/favorite.svg'; // 기본 아이콘 경로
+        }
+    }
+       
+    </script>
+</body>
+</html>
