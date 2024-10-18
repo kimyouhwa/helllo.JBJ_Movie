@@ -392,8 +392,44 @@ a{
   .bg48{background: url(img/swiper/m3.webp)}
   .bg49{background: url(img/swiper/m4.webp)}
   .bg50{background: url(img/swiper/m5.webp)}
+  /* footer */
+  #f_container{}
   
+  .f_container{}
+
+  .f_container .list_box{}
+  .f_container .list_box {
+    display: flex;
+    justify-content:left;
+    flex-direction: raw;
+  }
+  .f_container .list_box li{
+    list-style: none;
+    color: #fff;
+    font-size: 12px;
+  }
+  .f_container .list_box li a{}
+  #about_company{}
+  .about_company{}
+  .about_company li{ 
+    list-style: none;
+    color: #fff;
+    font-size: 12px;
+}
+
+  #social_icons{}
+  .social_icons{}
   
+  .about_com span{}
+
+ .last_sentenc{}
+ .last_sentenc p{
+    color: #fff;
+    font-size: 10px;
+ }
+
+
+
 
 /* 미디어 쿼리 */
 /* 화면 너비가 0~1280px
