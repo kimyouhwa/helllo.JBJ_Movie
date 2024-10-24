@@ -1,0 +1,145 @@
+/* #header_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff; /* 배경색 */
+/* }  */
+/* 
+.header_logo {
+    display: flex;
+    align-items: center;
+}
+
+.header_logo img {
+    margin-right: 10px;
+}
+
+.navbar_menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar_menu li { */
+    /* margin-right: 20px; /* 항목 간 간격 */
+/* } */ 
+/* 
+.search_box {
+    flex-grow: 1;
+    margin: 0 20px; /* 검색 박스 좌우 여백 */
+/* } */
+/* 
+.header_login {
+    display: flex;
+    align-items: center;
+} */
+/* 
+.header_login a {
+    margin-right: 10px; 로그인 링크와 아이콘 간 간격 */
+/* } */ 
+#header_box {
+    width: 80%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 세로 정렬 추가 */
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #777;
+    /*  꼭 자기 자신에게만 주기  */
+}
+.header_logo {
+    width: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.header_logo p {
+    width: 150px;
+    height: 60px;
+    margin-top: 50px;
+    font-size: 27px;
+    color: #34e451;
+    font-family: abster;
+    letter-spacing: 3px;
+}
+
+.header_logo img {
+    width: 50px;
+    height: 60px;
+}
+
+.navbar_menu {
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.navbar_menu ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+  
+}
+
+.navbar_menu li {
+    padding: 8px 20px;
+    list-style: none;
+    font-size: 13px;
+    color: #fff;
+    
+}
+
+.navbar_menu li a:hover {
+    color: #34e451;
+    
+}
+
+/* search box */
+.search_box {
+    margin-right: auto; 
+}
+
+.search_box input {
+    background: url(/ex/img/icon/search_white_wght400_GRAD0_opsz24.png\ \(2\)) no-repeat 5px center;
+    width: 600px;
+    height: 40px; /* 높이 조정 */
+    background-size: 20px;
+    padding-left: 40px;
+    border-radius: 4px;
+    margin: 20px 0; /* 마진 조정 */
+    color: #777;
+}
+
+/* login */
+.header_login {
+    display: flex;
+    align-items: center; /* 세로 정렬 추가 */
+    margin-left: auto; 
+}
+
+.header_login a {
+    width: 60px;
+    height: 25px;
+    border-radius: 4px;
+    margin-right: 30px; /* 왼쪽 간격 조정 */
+    text-align: center;
+    background: #242726;
+    color: #777;
+    font-size: 12px;
+}
+
+.header_login a:hover {
+    background: #34e451;
+    transition: all 0.3s ease-in; /* 애니메이션 시간 단축 */
+    color: #666;
+    font-weight: bold;
+}
