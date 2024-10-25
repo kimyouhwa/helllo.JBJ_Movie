@@ -5,35 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="/Detail/script.js">
     <link rel="stylesheet" href="/Detail/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="/Detail/script.js"></script>
+     <!-- 헤더푸터 고정 스크립트  -->
+<script>
+        $(document).ready(function() {
+    $("#header_box").load("../Includes/header.html");
+    $("#footer_box").load("../Includes/footer.html");
+    });
+</script>
 </head>
 <body>
-    <!-- header repeat -->
-    <header id="header_box">
-    </div>
-    <div class="header_logo"><img src="/home/img/icon/header_logo_green.png.png" alt="헤더로고 "> <p>JBJ_MOViE</p>
-        <div class="navbar_menu">
-          <ul>
-            <li><a href="">홈 </a></li>
-            <li><a href="">신작 </a></li>
-            <li><a href="">인기 </a></li>
-            <li><a href="">장르 </a></li>
-           </ul>
-        </div>
-        <div class="search_box">
-            <input type="text" placeholder="what are you looking for? ">
-            
-        </div>
-        <div class="header_login">
-            <a href="#">로그인</a>
-            <img src="img/icon/menu_hamburger_gray.png.png" alt=" ">
-        </div>
-   </header>
-   <!-- header repeat end -->
+    <!-- header-->
+     <header id="header_box"></header>
     <!--description   -->
 <div id="des_container">
   <div class="des_title">
@@ -41,33 +29,30 @@
     <ul>
         <li ><img src="/Detail/img/icon/tag_cmmg_19.svg" alt=""></li>
         <li>2024</li>
-        <li>드라마 </li>
+        <li>movie</li> </li>
         <li>50분</li>
     </ul>
  </div>
   <div class="watch_select">
-<button id="purchaseBtn">play</button>
+<button id="purchaseBtn" onclick="location. href='https://www.youtube.com/watch?app=desktop&v=4KAIFhJb2ZI'">play</button>
        <span id="favoriteBtn" onclick="toggleFavorite()">
-        <img src="/Detail/img/icon/favorite.svg">
+        <img src="/Detail/img/icon/favorite_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
             <p>&nbsp&nbsp찜 </p> 
         </span> 
-        <span id="shareBtn"><img src="/Detail/img/icon/share.svg"> 
+        <span id="shareBtn"><img src="/Detail/img/icon/ios_share_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg"> 
            <p>&nbsp공유</p>
         </span> 
   </div>
   <!-- share popup -->
   <div id="sharePopup" class="share-popup" style="display: none;">
       <span class="share-option" onclick="shareOnFacebook()">
-          <img src="/Detail/img/icon/circle-facebook .svg" alt="Facebook">
-         
+          <img src="/Detail/img/icon/circle-facebook.svg" alt="Facebook">
       </span>
       <span class="share-option" onclick="shareOnKakaoTalk()">
-          <img src="/Detail/img/icon/favorite_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg"alt="KakaoTalk">
-          
-      </span>
+          <img src="/Detail/img/icon/circle-kakao.svg"alt="KakaoTalk">
+     </span>
       <span class="share-option" onclick="copyLink()">
-          <img src="/Detail/img/icon/ios_share_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg" alt="Copy">
-         
+          <img src="/Detail/img/icon/circle-url (1).svg" alt="Copy">
       </span>
   </div>
 </div>
@@ -77,13 +62,13 @@
     <button id="toggleButton"><span>더보기</span><img src="/Detail/img/icon/down arrow.svg"></button>
     <div id="dropdown" class="dropdown-content" >
         <p>화재로 어머니를 잃은 11살 소년 ‘마히토’는 <br>아버지와 함께 어머니의 고향으로 간다.<br> 어머니에 대한 그리움과 새로운 보금자리에 <br>적응하느라 힘들어하던 ‘마히토’ 앞에 정체를 <br>알 수 없는 왜가리 한 마리가 나타나고,<br> 저택에서 일하는 일곱 할멈으로부터<br> 왜가리가 살고 있는 탑에 대한 신비로운<br> 이야기를 듣게 된다. 그러던 어느 날,<br> ‘마히토’는 사라져버린 새엄마 ‘나츠코’를 찾기<br> 위해 탑으로 들어가고, 왜가리가<br> 안내하는 대로 이세계(異世界)의 문을 통과하는데…!<br>Lorem, ipsum dolor sit amet consectetur
-           
         <button id="closeButton"><span>닫기</span><img src="/Detail/img/icon/up arrow.svg" alt=""></button>
     </div>
   </div>
-<div class="des_poster"><img src="/Detail/img/des_poster/지판.jpg" alt=""></div>
-
+<div class="des_poster"><img src="/Detail/img/des_poster/geudaedeul.webp" alt=""></div>
 </div>
+<!-- footer -->
+ <footer id="footer_box"></footer>
 <!--js시놉시스 -->
 <script>
     document.getElementById('toggleButton').addEventListener('click', function() {
@@ -95,30 +80,8 @@ document.getElementById('closeButton').addEventListener('click', function() {
     document.getElementById('dropdown').style.display = 'none';
 });
 </script>
-<!-- 더보기 창  -->
-<!-- <script>
-const textWrapper = document.querySelector('.text-wrapper');
-const text = document.querySelector('.text');
-const moreText = document.querySelector('#toggleButton');
-const lessText = document.querySelector('#closeButton');        
 
-// 더보기 텍스트 클릭시 이벤트
-moreText.addEventListener('click', () => {
-
-moreText.style.display = 'none'; // 더보기 텍스트 삭제
-lessText.style.display = 'inline-block'; // 줄이기 텍스트 표시
-text.style.display = 'inline-block'; // 텍스트의 속성을 -webkit-box에서 일반 inline-block 으로 변경
-});
-
-// 줄이기 텍스트 클릭시 이벤트
-lessText.addEventListener('click', () => {
-
-lessText.style.display = 'none'; // 줄이기 텍스트 삭제
-moreText.style.display = 'inline-block'; // 더보기 텍스트 표시
-text.style.display = '-webkit-box'; // 텍스트의 속성을 다시 -webkit-box로 표시
-});
-</script> -->
-<!-- share popup-->
+<!-- share popup script-->
 <script>
     document.getElementById("shareBtn").onclick = function() {
     const popup = document.getElementById("sharePopup");
@@ -150,5 +113,6 @@ function toggleFavorite() {
 }
        
     </script>
+   
 </body>
 </html>

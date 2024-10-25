@@ -5,36 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hello.JalbaJo.Movie</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="script.js">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script defer src="/home/script.js"></script>
+    <!-- 헤더푸터 고정 스크립트  -->
+    <script>
+        $(document).ready(function() {
+    $("#header_box").load("../Includes/header.html");
+    $("#footer_box").load("../Includes/footer.html");
+    });
+</script>
 </head>
 <body>
-    <header id="header_box">
-        <div class="header_logo">
-            <img src="/home/img/icon/header_logo_green.png.png" alt="헤더로고">
-            <p>JBJ_MOViE</p>
-        </div>
-        <nav class="navbar_menu">
-            <ul>
-                <li><a href="">홈</a></li>
-                <li><a href="">신작</a></li>
-                <li><a href="">인기</a></li>
-                <li><a href="">장르</a></li>
-            </ul>
-        </nav>
-        <!-- search box  -->
-        <div class="search_box">
-            <input type="text" placeholder="what are you looking for?">
-        </div>
-        <div class="header_login">
-            <a href="#"><p>로그인</p></a>
-            <img src="/home/img/icon/icons8-햄버거-메뉴-gray-30.png" alt="햄버거 메뉴">
-        </div>
-    </header>
+    <!-- header-->
+     <header id="header_box"></header>
      <!-- mini_calendar  -->
     <div id="main_date">
         <p>Discover daily</p>
@@ -173,7 +160,7 @@
    </div>
    <!-- footer -->
      
-   <footer>
+   <footer id="footer_box">
     <span class="line">한줄 라인 
 
     </span>

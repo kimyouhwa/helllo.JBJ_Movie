@@ -1,0 +1,264 @@
+<footer id="footer_box">
+    <span class="line"></span>
+    <div id="f_container">
+        <div class="f_container">
+            <ul class="list_box" >
+                <li><a href="고객센터">고객센터</a></li>
+                <li><a href="이용약관">이용약관</a></li>
+                <li><a href="개인정보처리방침">개인정보처리방침</a></li>
+                <li><a href="청소년보호정책">청소년보호정책</a></li>
+                <li><a href="법적조치 ">법적조치 </a></li>
+                <li><a href="이벤트">이벤트</a></li>
+                <li><a href="인재채용">인재채용</a></li>
+                <li ><a href="브랜드바로가기">브랜드바로가기 + &nbsp |</a></li>
+                <li><a href="인재채용">그룹계열사 바로가기 + &nbsp |</a></li>
+            </ul>
+        </div> 
+            <div id="about_company">
+                <ul class="ac1">
+                    <li>대표 이사 : 최주희 |</li>
+                    <li><a href="#">사업자 정보확인 | </a></li>
+                    <li>사업자 등록번호: 120-81-12345 |</li>
+                    <li>통신판매업: 제2018-서울강남-01234호 |</li>
+                    </ul>
+                    <ul class="ac2">
+                        <li>사업장: 서울특별시 강남구 테헤란로 123, 12층(역삼동, 강남파이낸스센터) |</li>
+                        <li>호스팅사업자:씨제이올리브네트웍스(주)</li>
+                    </ul>
+                    <ul class="ac3">
+                        <li>고객센터(평일9시~18시) : 1544-1234 |</li>
+                        <li><a href="#">1:1게시판문의 |</a></li>
+                        <li>대표메일: help@watcha.com |</li>
+                        <li>전화번호
+                        02-1234-5678(챗봇/채팅상담연결) |</li>
+                        </li>
+                    </ul>
+                <ul class="ac4">
+                    <li>ENM시청자 상담실(편성문의 및 시청자의견) : 02-1234-5678 |</li>
+                    <li>Mnet 고객센터(방송편성문의) : 02-1234-5678 |</li>
+                                   
+                </ul>
+                          </div>       
+            <div id="social_icons"  >
+                <ul class="social_icons"  >
+                    <li><a href=""><img src="/home/img/icon/icons8-youtube-24.png"></a></li>
+                    <li><a href=""><img src="/home/img/icon/icons8-인스-타-그램-24.png"></a></li>
+                    <li><a href=""><img src="/home/img/icon/icons8-지저귀다-24.png"></a></li>
+                    <li><a href=""><img src="/home/img/icon/icons8-페이-스북-f-24.png"></a></li>        
+                </ul>
+            </div> 
+            <div class="last_sentenc">
+                <p>Copyrghter ⓒ 주식회사티빙 all right reserved</p>
+            </div>      
+         </div>
+    </div>
+   </footer>
+   <style>
+    #footer_box{
+    position: static;
+    bottom: 0;
+    left: 0;
+    z-index: 1000; 
+}
+.line {
+    display: block;
+    width: 100vp;
+    height: 0.5px;
+    background-color: #777;
+    margin-top: 50px; 
+    opacity: 0.5;
+}
+ .list_box {
+     display: flex;
+     flex-wrap: nowrap;  
+     align-items: center; /* 수직 중앙 정렬 */
+     padding: 0; 
+     margin-top: 20px; 
+     list-style-type: none; 
+     gap: 30px;
+     font-weight: bold;
+     /* border: 1px solid #518be9; */
+     font-size: 12px;
+     margin-left: 40px;
+ }
+.list_box li:nth-of-type(8) {
+    margin-left: auto; 
+    margin-right: 30px; 
+}
+.list_box li:nth-of-type(9){
+    margin-left: 0; 
+    margin-right: 100px;
+}
+#about_company{
+    /* border: 1px solid #396d6d;   */
+    color: #858585;
+    font-size: 10px;
+    margin-top: auto;
+}
+.ac1{
+    display: flex;  
+    gap: 20px;
+    list-style-type: none;
+}
+.ac2{
+    display: flex;  
+    gap: 20px;
+    margin-top: 0;
+    list-style-type: none;
+}
+.ac3{
+    display: flex;  
+    gap: 20px;
+    margin-top: 0;
+    list-style-type: none; 
+}
+.ac4{
+    display: flex;  
+    gap: 20px;
+    margin-top: 0;
+    list-style-type: none; 
+}
+
+.social_icons{
+display: flex;
+width: 20px;
+filter:
+    opacity(0.3)
+    invert(82%) 
+    sepia(10%)
+    saturate(7%) 
+    hue-rotate(331deg)
+    brightness(98%)
+    contrast(94%);
+list-style-type: none;
+}
+.social_icons li{
+    margin-right: 30px;
+    width: 30px;
+    height: 20px;
+    
+    border-radius: 50px 70px ;
+    background: #ffffff;  
+    position: relative;
+}
+.social_icons li::before {
+    content: '';
+    position: absolute;
+    width: 30px; /* 원의 크기 */
+    height: 30px; /* 원의 크기 */
+    background-color: #f0f0f0; /* 원의 배경색 */
+    border-radius: 50%; /* 둥근 원 */
+    top: 50%; /* 중앙에 배치 */
+    left: 50%; /* 중앙에 배치 */
+    transform: translate(-50%, -50%); /* 중앙 정렬 */
+    z-index: 0; /* 아이콘 아래에 배치 */
+}
+.social_icons li img {
+    position: relative;
+    z-index: 2; /* 원 아래에 배치 */
+    width: 24px; /* 아이콘 크기 */
+    height: 24px; /* 아이콘 크기 */
+    }
+ .last_sentenc{
+    font-size: 10px;
+    color: #858585;
+    margin-left: 40px;
+ }
+
+ /*------ 미디어쿼리------  */
+@media (max-width: 1024px) {
+    .header_logo p {
+        font-size: 24px; /* 폰트 크기 조정 */
+    }
+
+    .navbar_menu {
+        width: 100%; /* 메뉴 폭을 100%로 조정 */
+        flex-direction: column; /* 세로 방향으로 배치 */
+    }
+
+    .navbar_menu li {
+        padding: 10px 0; /* 세로 패딩 조정 */
+        font-size: 14px; /* 폰트 크기 조정 */
+    }
+
+    .search_box input {
+        width: 100%; /* 검색창 폭을 100%로 조정 */
+    }
+
+    .header_login {
+        margin-right: 20px; /* 오른쪽 마진 조정 */
+    }
+}
+ @media (max-width: 768px) {
+ body {
+    padding-top: 60px; /* 헤더 높이에 맞춰 조정 */
+    padding-bottom: 80px; /* 푸터 높이에 맞춰 조정 */
+    }
+  .header_logo p {
+        font-size: 20px; 
+  }
+    .navbar_menu li {
+        font-size: 12px; 
+    }
+    .search_box input {
+        height: 35px; 
+    }
+    .footer {
+        font-size: 10px; 
+    }
+    .list_box {
+        flex-direction: column; /* 가로로 정렬 */
+       flex-wrap: wrap; /* 가로 정렬에서 다음 줄로 넘기기 */
+       
+    }
+    .list_box li{
+        margin:-10px; 
+    }
+     .list_box li:nth-child(8){
+        margin: 0 auto;
+    } 
+    .list_box li:nth-child(9){
+        margin: 0 auto;
+    }
+    .social_icons {
+        flex-direction:row; 
+    }
+}
+/* 480px 이하: 모바일 화면에 최적화. 요소의 크기를 더욱 줄이고, 
+               슬라이드와 버튼의 레이아웃을 세로로 조정 */
+@media (max-width: 480px) {
+   
+
+    .header_logo p {
+        font-size: 14px; 
+        
+    }
+
+    .navbar_menu li {
+        font-size: 10px; 
+    }
+
+    .search_box input {
+        width: 100%; 
+        height: 10px; 
+    }
+
+    .header_login a {
+        width: 50px; 
+        height: 20px; 
+        font-size: 10px; 
+    }
+    .header_login a img{
+        width: 20px; 
+        height: 20px; 
+        margin-right: 0;
+    }
+
+    
+
+    .last_sentenc {
+        font-size: 8px; /* 폰트 크기 조정 */
+    }
+}
+
+   </style>

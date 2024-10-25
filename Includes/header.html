@@ -1,0 +1,258 @@
+
+<header id="header_box">
+    <div class="header_logo">
+        <img src="/home/img/icon/header_logo_green.png.png" alt="헤더로고">
+        <p>JBJ_MOViE</p>
+    </div>
+    <nav class="navbar_menu">
+        <ul>
+            <li><a href="">홈</a></li>
+            <li><a href="">신작</a></li>
+            <li><a href="">인기</a></li>
+            <li><a href="">장르</a></li>
+        </ul>
+    </nav>
+    <!-- search box  -->
+    <div class="search_box">
+        <input type="text" placeholder="what are you looking for?">
+    </div>
+    <div class="header_login">
+        <a href="#"><p>로그인</p></a>
+        <img src="/home/img/icon/icons8-햄버거-메뉴-gray-30.png" alt="햄버거 메뉴">
+    </div>
+</header>
+<!--  -->
+<style>
+#header_box {
+    width: 100%;
+    height: 80px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 세로 정렬 추가 */
+    box-sizing: border-box;
+     /* 고정값 추가 gpt */
+     z-index: 1000;
+     position: fixed;
+     top: 0;
+     left: 0;
+     text-align: center;
+     background: linear-gradient(45deg, #090724,#0b2921); 
+}
+  
+a{
+    text-decoration: none;
+    color: #777;
+    
+}
+.header_logo {
+    width: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.header_logo p {
+    width: 150px;
+    height: 60px;
+    margin-top: 50px;
+    font-size: 27px;
+    color: #34e451;
+    font-family: abster;
+    letter-spacing: 3px;
+}
+
+.header_logo img {
+    width: 50px;
+    height: 60px;
+}
+
+.navbar_menu {
+    width: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.navbar_menu ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+  
+}
+
+.navbar_menu li {
+    padding: 8px 20px;
+    list-style: none;
+    font-size: 13px;
+    color: #fff;
+    
+}
+
+.navbar_menu li a:hover {
+    color: #34e451;
+    
+}
+
+/* search box */
+.search_box {
+    margin-right: auto; 
+}
+
+.search_box input {
+    background: url(/home/img/icon/search_white_wght400_GRAD0_opsz24.png\ \(2\).png) no-repeat 5px center;
+    width: 600px;
+    height: 40px; /* 높이 조정 */
+    background-size: 20px;
+    padding-left: 40px;
+    border-radius: 4px;
+    margin: 20px 0; /* 마진 조정 */
+    color: #777;
+}
+
+/* login */
+.header_login {
+    display: flex;
+    align-items: center; /* 세로 정렬 추가 */
+    margin-left: auto; 
+    margin-right: 80px;
+}
+
+.header_login a {
+    width: 60px;
+    height: 25px;
+    border-radius: 4px;
+    margin-right: 50px; /* 왼쪽 간격 조정 */
+    background: #242726;
+    color: #a8a8a8;
+    font-size: 12px;
+}
+.header_login a p{
+   margin-top: 3px;
+   
+}
+
+.header_login a:hover {
+    background: #34e451;
+    transition: all 0.3s ease-in; /* 애니메이션 시간 단축 */
+    color: #5a5a5a;
+    font-weight: bold;
+}
+
+.header_login img{
+    width: 30px;
+    height: 30px; 
+    margin-right: 50px;    
+}
+   
+
+ .header_login img:hover{
+  
+    /* background: url(/home/img/icon/icons8-햄버거-메뉴-green-30.png) no-repeat center center; */
+    transition: all 0.5s ease-in-out;
+    color: #34e451;
+    /* font-weight:bold; */
+ }
+/*------ 미디어쿼리------  */
+@media (max-width: 1024px) {
+    .header_logo p {
+        font-size: 24px; /* 폰트 크기 조정 */
+    }
+
+    .navbar_menu {
+        width: 100%; /* 메뉴 폭을 100%로 조정 */
+        flex-direction: column; /* 세로 방향으로 배치 */
+    }
+
+    .navbar_menu li {
+        padding: 10px 0; /* 세로 패딩 조정 */
+        font-size: 14px; /* 폰트 크기 조정 */
+    }
+
+    .search_box input {
+        width: 100%; /* 검색창 폭을 100%로 조정 */
+    }
+
+    .header_login {
+        margin-right: 20px; /* 오른쪽 마진 조정 */
+    }
+}
+ @media (max-width: 768px) {
+ body {
+    padding-top: 60px; /* 헤더 높이에 맞춰 조정 */
+    padding-bottom: 80px; /* 푸터 높이에 맞춰 조정 */
+    }
+  .header_logo p {
+        font-size: 20px; 
+  }
+    .navbar_menu li {
+        font-size: 12px; 
+    }
+    .search_box input {
+        height: 35px; 
+    }
+    .footer {
+        font-size: 10px; 
+    }
+    .list_box {
+        flex-direction: column; /* 가로로 정렬 */
+       flex-wrap: wrap; /* 가로 정렬에서 다음 줄로 넘기기 */
+       
+    }
+    .list_box li{
+        margin:-10px; 
+    }
+    /* .list_box li:nth-of-type(8){
+        margin: 0 auto;
+    } 
+    .list_box li:nth-of-type(9){
+        margin: 0 auto; 
+    */
+    .social_icons {
+        flex-direction:row; 
+       
+    }
+}
+/* 480px 이하: 모바일 화면에 최적화. 요소의 크기를 더욱 줄이고, 
+               슬라이드와 버튼의 레이아웃을 세로로 조정 */
+@media (max-width: 480px) {
+   
+
+    .header_logo p {
+        font-size: 14px; 
+        
+    }
+
+    .navbar_menu li {
+        font-size: 10px; 
+    }
+
+    .search_box input {
+        width: 100%; 
+        height: 10px; 
+    }
+
+    .header_login a {
+        width: 50px; 
+        height: 20px; 
+        font-size: 10px; 
+    }
+    .header_login a img{
+        width: 20px; 
+        height: 20px; 
+        margin-right: 0;
+    }
+
+    
+
+    .last_sentenc {
+        font-size: 8px; /* 폰트 크기 조정 */
+    }
+}
+
+
+ </style>
+     
+ 
+  

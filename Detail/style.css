@@ -1,126 +1,150 @@
+
 body{
-    margin: 0px;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     background: linear-gradient(45deg, #090724,#0b2921); 
-    /* background: linear-gradient(rgba(0,0,0,0.8),(rgba(0,0,0,0.8))),  */
-    /* url(/home/img/bg.jpg) no-repeat center center/cover; */
     position: relative;
+    /* 고정값 추가 gpt */
+    padding-top: 80px; /* height of header */
+    padding-bottom: 100px; /* height of footer */
 }
-
 /* header part */
-#header_box{
-    width: 80%;
+#header_box {
+    width: 100%;
     height: 80px;
-    margin: 0 auto;
+    margin-left: 50px;
     display: flex;
-    justify-content: space-;
+    justify-content: space-between;
+    align-items: center; /* 세로 정렬 추가 */
     box-sizing: border-box;
+     /* 고정값 추가 gpt */
+     z-index: 1000;
+     position: fixed;
+     top: 0;
+     left: 0;
+     text-align: center;
+     background: linear-gradient(45deg, #090724,#0b2921); 
+}
+    /* 고정값 추가 gpt */
+footer{
+    position: static;
+    bottom: 0;
+    left: 0;
+    z-index: 1000; 
 }
 a{
     text-decoration: none;
     color: #777;
+    
 }
-.header_logo{
+.header_logo {
     width: 200px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
-.header_logo p{
+
+.header_logo p {
     width: 150px;
     height: 60px;
     margin-top: 50px;
     font-size: 27px;
     color: #34e451;
     font-family: abster;
-    src: url(/Detail/font/abster-500.woff) format('woff');
     letter-spacing: 3px;
 }
+
 .header_logo img {
     width: 50px;
     height: 60px;
-    color: #34e451;
-   
-}    
+}
+
 .navbar_menu {
     width: 400px;
-    height: 80px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    
 }
-.navbar_menu ul{ 
+
+.navbar_menu ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    /* background-color: #666;*/
- }
-.navbar_menu li{
-    width: 30px;
+    
+  
+}
+
+.navbar_menu li {
     padding: 8px 20px;
-    list-style: none;   
+    list-style: none;
     font-size: 13px;
     color: #fff;
+    
 }
-.navbar_menu li a:hover{
-    color:  #34e451;
+
+.navbar_menu li a:hover {
+    color: #34e451;
+    
 }
-/*------- search box */
-.search_box input{
-    background: url(/home/img/icon/search_FILL0_wght400_GRAD0_opsz24.png\ \(2\).png)
-    no-repeat 5px center; 
+
+/* search box */
+.search_box {
+    margin-right: auto; 
+}
+
+.search_box input {
+    background: url(/home/img/icon/search_white_wght400_GRAD0_opsz24.png\ \(2\)) no-repeat 5px center;
     width: 600px;
-    height: 20px;
+    height: 40px; /* 높이 조정 */
     background-size: 20px;
     padding-left: 40px;
     border-radius: 4px;
-    margin: 25px ;
+    margin: 20px 0; /* 마진 조정 */
     color: #777;
 }
-/*--------- login */
-.header_login{
+
+/* login */
+.header_login {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    align-items: center; /* 세로 정렬 추가 */
+    margin-left: auto; 
+    margin-right: 80px;
 }
-    /* margin: 8px; */
- 
- .header_login a{
+
+.header_login a {
     width: 60px;
     height: 25px;
     border-radius: 4px;
-    margin: 10px 0 0 30px;
-    text-align: center;
-    background: #242726; 
-    color: #777;
+    margin-right: 50px; /* 왼쪽 간격 조정 */
+    background: #242726;
+    color: #a8a8a8;
     font-size: 12px;
-    /* border: 1px solid #666;   */
- }
-.header_login a:hover{
-    background: #34e451;
-    transition: all 1s ease-in;
-    color: #666;
-    font-weight:bold;
+}
+.header_login a p{
+   margin-top: 3px;
+   
+}
 
-    }
+.header_login a:hover {
+    background: #34e451;
+    transition: all 0.3s ease-in; /* 애니메이션 시간 단축 */
+    color: #5a5a5a;
+    font-weight: bold;
+}
+
 .header_login img{
-    width: 35px;
-    height: 35px;
-    display: flex;
-    /* color: #777; */
-    margin-top: 10px;
-    padding: 0 50px;
-    /* font-size: 12px; */
-    /* border: 1px solid #666;*/ 
- } 
+    width: 30px;
+    height: 30px; 
+    margin-right: 50px;    
+}
 
  .header_login img:hover{
   
-    background: url(/home/img/icon/menu_hamburger_green.png.jpg) no-repeat center center;
+    /* background: url(/home/img/icon/menu_hamburger_green.png.jpg) no-repeat center center; */
     transition: all 0.5s ease-in-out;
     color: #1b1919;
-    font-weight:bold;
+    /* font-weight:bold; */
  }
  /* description */
  #des_container{

@@ -1,4 +1,9 @@
-    // mini_calendar
+$("document").ready(function() {
+  $("#header_box").load("header.html");
+  $("#footer_box").load("footer.html");
+})
+
+// mini_calendar
     function updateDate() {
     const today = new Date();
     const date = today.getDate();

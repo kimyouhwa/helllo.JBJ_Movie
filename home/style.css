@@ -409,11 +409,7 @@ a{
   .bg50{background: url(img/swiper/m5.webp)}
  
   /* footer */
-  /* footer{
-    position: fixed;
-    width: 80%;
-    height: 210px;
-  } */
+  
 .line {
     display: block;
     width: 100vp;
@@ -545,18 +541,43 @@ list-style-type: none;
         margin-right: 20px; /* 오른쪽 마진 조정 */
     }
 }
-/* 768px 이하: 작은 화면에서의 레이아웃 조정          메뉴세로배치,다양한 요소의 크기를 줄임 */
-@media (max-width: 768px) {
-    body {
-        padding-top: 60px; /* 헤더 높이에 맞춰 조정 */
-        padding-bottom: 80px; /* 푸터 높이에 맞춰 조정 */
+/* 768px 이하: 작은 화면에서의 레이아웃 조정          
+              메뉴세로배치,다양한 요소의 크기를 줄임 */
+              /* --------------추가 수정분 헤더 부분 2열로 랩하려 했으나 실패 ㅜㅜ  */
+              /* #header_box {
+                flex-wrap: wrap;
+                height: 100px;
+                padding: 10px;
+            }
+            .header_logo {
+                flex: 1 1 100%; /* 로고를 전체 폭 사용 */
+                /* justify-content: center; /* 중앙 정렬 */
+                /*  display: flex; /* 플렉스 사용 */
+                /*} */
+                /*.navbar_menu {
+                    flex: 1 1 100%; /* 메뉴를 전체 폭 사용 */
+                    /* justify-content: center; /* 중앙 정렬 */
+                    /*  margin-top: 10px; /* 간격 추가 */
+                    /* }
+                    
+                    .header_login {
+                        flex: 1 1 100%; /* 로그인 부분을 전체 폭 사용 */
+                        /*   justify-content: center; /* 중앙 정렬 */
+                        /* margin-top: 10px; /* 간격 추가 */
+                        /* }
+                        
+                        .header_login a {
+                            width: 40px; /* 버튼 폭 조정 */
+                            /*  height: 20px; /* 버튼 높이 조정 */
+                            /* font-size: 10px; /* 폰트 크기 조정 */
+                            /*} */
+                            /* --------- */
+ @media (max-width: 768px) {
+ body {
+    padding-top: 60px; /* 헤더 높이에 맞춰 조정 */
+    padding-bottom: 80px; /* 푸터 높이에 맞춰 조정 */
     }
-
-    #header_box {
-        height: 60px; /* 헤더 높이 조정 */
-    }
-
-    .header_logo p {
+  .header_logo p {
         font-size: 20px; /* 폰트 크기 조정 */
     }
 
@@ -589,25 +610,34 @@ list-style-type: none;
         align-items: center; /* 중앙 정렬 */
     }
 }
-/* 480px 이하: 모바일 화면에 최적화. 요소의 크기를 더욱 줄이고, 슬라이드와 버튼의 레이아웃을 세로로 조정 */
+/* 480px 이하: 모바일 화면에 최적화. 요소의 크기를 더욱 줄이고, 
+               슬라이드와 버튼의 레이아웃을 세로로 조정 */
 @media (max-width: 480px) {
+   
+
     .header_logo p {
-        font-size: 18px; /* 폰트 크기 조정 */
+        font-size: 14px; 
+        
     }
 
     .navbar_menu li {
-        font-size: 10px; /* 폰트 크기 조정 */
+        font-size: 10px; 
     }
 
     .search_box input {
-        width: 100%; /* 검색창 폭을 100%로 조정 */
-        height: 30px; /* 검색창 높이 조정 */
+        width: 100%; 
+        height: 10px; 
     }
 
     .header_login a {
-        width: 50px; /* 버튼 폭 조정 */
-        height: 20px; /* 버튼 높이 조정 */
-        font-size: 10px; /* 폰트 크기 조정 */
+        width: 50px; 
+        height: 20px; 
+        font-size: 10px; 
+    }
+    .header_login a img{
+        width: 20px; 
+        height: 20px; 
+        margin-right: 0;
     }
 
     .slide_section {
