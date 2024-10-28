@@ -25,7 +25,7 @@
     <!--description   -->
 <div id="des_container">
   <div class="des_title">
-    <h2>그대들은 어떻게 살 것인가</h2>
+    <h2>위키드</h2>
     <ul>
         <li ><img src="/Detail/img/icon/tag_cmmg_19.svg" alt=""></li>
         <li>2024</li>
@@ -34,26 +34,34 @@
     </ul>
  </div>
   <div class="watch_select">
-<button id="purchaseBtn" onclick="location. href='https://www.youtube.com/watch?app=desktop&v=4KAIFhJb2ZI'">play</button>
-       <span id="favoriteBtn" onclick="toggleFavorite()">
-        <img src="/Detail/img/icon/favorite_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
-            <p>&nbsp&nbsp찜 </p> 
-        </span> 
-        <span id="shareBtn"><img src="/Detail/img/icon/ios_share_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg"> 
-           <p>&nbsp공유</p>
-        </span> 
-  </div>
-  <!-- share popup -->
-  <div id="sharePopup" class="share-popup" style="display: none;">
-      <span class="share-option" onclick="shareOnFacebook()">
-          <img src="/Detail/img/icon/circle-facebook.svg" alt="Facebook">
-      </span>
-      <span class="share-option" onclick="shareOnKakaoTalk()">
-          <img src="/Detail/img/icon/circle-kakao.svg"alt="KakaoTalk">
-     </span>
-      <span class="share-option" onclick="copyLink()">
-          <img src="/Detail/img/icon/circle-url (1).svg" alt="Copy">
-      </span>
+    <button id="purchaseBtn">play</button> 
+    <!-- 비디오 팝업 -->
+<div class="overlay" id="overlay"></div>
+<div class="popup" id="popup">
+    <span id="closeBtn" class="close-btn">&times;</span>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/w6FbiayT3N4?si=HPN-jwtMAW1kr7GO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<!-- 비디오 팝업 -->
+<span id="favoriteBtn" onclick="toggleFavorite()">
+    <img src="/Detail/img/icon/favorite_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
+    <p>&nbsp&nbsp찜 </p> 
+</span> 
+<span id="shareBtn"><img src="/Detail/img/icon/ios_share_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg"> 
+    <p>&nbsp공유</p>
+</span> 
+</div>
+<!-- share popup -->
+<div id="sharePopup" class="share-popup" style="display: none;">
+    <span class="share-option" onclick="shareOnFacebook()">
+        <img src="/Detail/img/icon/circle-facebook.svg" alt="Facebook">
+    </span>
+    <span class="share-option" onclick="shareOnKakaoTalk()">
+        <img src="/Detail/img/icon/circle-kakao.svg"alt="KakaoTalk">
+    </span>
+    <span class="share-option" onclick="copyLink()">
+        <img src="/Detail/img/icon/circle-url (1).svg" alt="Copy">
+    </span>
+</div>
   </div>
 </div>
 <!--  시놉시스  -->
@@ -65,7 +73,7 @@
         <button id="closeButton"><span>닫기</span><img src="/Detail/img/icon/up arrow.svg" alt=""></button>
     </div>
   </div>
-<div class="des_poster"><img src="/Detail/img/des_poster/geudaedeul.webp" alt=""></div>
+<div class="des_poster"><img src="/Detail/img/des_poster/wecked_3129.png" alt=""></div>
 </div>
 <!-- footer -->
  <footer id="footer_box"></footer>
@@ -112,6 +120,30 @@ function toggleFavorite() {
         }
 }
        
+    </script>
+    <!-- 비디오 팝업 -->
+    <script>
+        // 팝업과 오버레이 요소 가져오기
+        const popup = document.getElementById("popup");
+        const overlay = document.getElementById("overlay");
+    
+        // 버튼 클릭 시 팝업과 오버레이 표시
+        document.getElementById("purchaseBtn").addEventListener("click", function() {
+            popup.style.display = "block";
+            overlay.style.display = "block";
+        });
+    
+        // 닫기 버튼 클릭 시 팝업과 오버레이 숨김
+        document.getElementById("closeBtn").addEventListener("click", function() {
+            popup.style.display = "none";
+            overlay.style.display = "none";
+        });
+    
+        // 오버레이 클릭 시 팝업과 오버레이 숨김
+        overlay.addEventListener("click", function() {
+            popup.style.display = "none";
+            overlay.style.display = "none";
+        });
     </script>
    
 </body>
