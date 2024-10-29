@@ -35,7 +35,7 @@ footer{
 }
 a{
     text-decoration: none;
-    color: #777;
+    color: #8b8b8b;
     
 }
 .header_logo {
@@ -151,26 +151,23 @@ a{
     width: 80%;
  
     margin: 0 auto;
-    border: 1px solid #35ff35;
+    /* border: 1px solid #35ff35; */
 
  }
- .des_title{
 
-     border: 1px solid #4122f1;
-}
 h2{
-    border: 1px solid #666;
-    color: #fff;
+    color: #f5f5f5;
     padding-left:10px;
+    /* border: 1px solid #666; */
 }
  .des_title ul{
     width: 10%;
     height: 10%;
-    border: 1px solid #666;
     display: flex;
     flex-direction: row;
     justify-content: left;
     padding-left: 0;
+    /* border: 1px solid #666; */
  }
  /* .des_title ul img{-++++-
     width: 17px;
@@ -184,31 +181,31 @@ h2{
     width: 100%;
     height: 60%;
     list-style: none;
-    color:#fff;
-  
+    color:#f5f5f5;
     margin: 2px;
     padding:0 2px 0 0;
     text-align: center;
     border-radius: 4px;
-    font-size: 10px;
-    border: 1px solid #666;
+    font-size: 11px;
+    /* border: 1px solid #666; */
  }
  .watch_select{
     margin-top: 50px;
     width: 350px;
     display: flex;
     justify-content: space-between;
-    border: 1px solid #d32828;
-    background-color: #ccc;
+    background-color: #444;
+    /* border: 1px solid #d32828; */
 }
 /* ------찜 ,공유  */
 .watch_select span{  
-    color:#414141;
+    color:#f5f5f5;
     justify-content: center;
     align-items: center;
     display: inline-block;
-    border: 1px solid #cf7d7d;
-    position: relative; /*  1.드롭업 창 위치를 위해 relative 설정 */
+    position: relative; 
+    /*  1.드롭업 창 위치를 위해 relative 설정 */
+    /* border: 1px solid #cf7d7d; */
 }
 .watch_select p {
     font-size: 11px;
@@ -216,19 +213,18 @@ h2{
 }
 .watch_select  img{
     display: inline-block;
-    border: 1px solid #dd22c4;
     cursor: pointer; /*2. 커서를 포인터로 변경 */
+    /* border: 1px solid #dd22c4; */
 }
 /* 비디오팝업  */
 #purchaseBtn{
     width: 200px;
     height: 50px;
     border-radius: 6px;
-    border: 1px solid #666;
-  
-
+    background-color: #414141;
+    color:#f5f5f5
+    /* border: 1px solid #666; */
  }
- 
 /* 전체 화면 어둡게 오버레이 */
 .overlay {
     display: none;
@@ -240,7 +236,6 @@ h2{
     background-color: rgba(0, 0, 0,0.7);
     z-index: 5;
 }
-
 /* 팝업 스타일 */
 .popup {
     display: none;
@@ -249,7 +244,7 @@ h2{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
-    background-color: white;
+    background-color:rgba(0, 0, 0,0.7);
     padding: 10px;
     border-radius: 8px;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
@@ -257,16 +252,19 @@ h2{
 }
 .popup iframe {
     width: 100%;
-    height: 600px; 
+    height: 700px; 
 }
 
 /* 닫기 버튼 스타일 */
 .close-btn {
     cursor: pointer;
     font-size: 18px;
-    color: red;
     float: right;
     margin: -10px -10px 0 0;
+    border: none; /* 테두리 없애기 */
+    color: gray; /* 글자색을 그레이로 변경 */   
+    background: none; /* 배경색 없애기 */
+    outline: none; /* 포커스 아웃라인 없애기 */
 }
 
 /* share popup */
@@ -276,12 +274,12 @@ h2{
     margin-top: -79px; /* 공유 아이콘 위로 위치 */
     left: 470px; /* 아이콘과 정렬 */
     background-color: #666;
-    border: 1px solid #7e3737;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     padding: 0px;
     z-index: 1000;
     display: none;
+    /* border: 1px solid #7e3737; */
 }
 
 .share-option {
@@ -289,7 +287,7 @@ h2{
     align-items: center;
     margin: 0 7px 0 7px;
     cursor: pointer;
-    border: 1px solid #af6f6f;
+    /* border: 1px solid #af6f6f; */
 }
 
 .share-option img {
@@ -297,120 +295,77 @@ h2{
     width: 20px;
     margin: 0 auto;
 }
-.favorite-selected {
-    background-color: white; /* 선택 시 배경색 변경 */
-    border: 1px solid #cf7d7d; /* 선택 시 테두리 색상 */
-}
-/* 시놉시스  */
- 
-.tb_container{
+/* .favorite-selected {
+    background-color: rgb(189, 186, 186); 선택 시 배경색 변경 
+     border: 1px solid #cf7d7d; *선택 시 테두리 색상 
+} */
+
+  /*dbgBTn수정  */
+ /* 시놉시스 스타일 */
+ .tb_container {
     width: 80%;
-    margin :2% 10%;
-    border: 1px solid #0ec469;
+    margin: 2% 10%;
     display: flex;
     justify-content: space-between;
     position: relative;
+    /* border: 1px solid #0ec469; */
 }
-#tb_container{
+
+#tb_container {
     width: 40%;
     height: 380px;
-    border: 1px solid #ff1414;
     position: absolute;
+    /* border: 1px solid #ff1414; */
 }
-.des_poster{
+
+.des_poster {
     width: 40%;
-    border: 1px solid #7568f0;
     margin-left: 60%;
-}
-#dropdown{
-   width: 90%;
-   height: 330px;
-   background-color: #020620;
-   border: 1px solid #f78030;
-   margin: 0 20px 0 10px;
-   position: relative;
-  
-   
-}
-.dropdown-content {
-    /* height: 60%;
-    border: 1px solid #27c434;
-    padding: 10px;
-    margin-top: 10px; */
-   
-    /* overflow: hidden;  */
-    /* margin-bottom: 0;
-    position: absolute; */
-    /* -webkit-line-clamp: 3; 
-    -webkit-box-orient: vertical; 
-    display: -webkit-box; 
-    text-overflow: ellipsis; 
-    order: 1px solid black; 
-    */
-}
- .dropdown-content p{
-    height:150px;
-    color: #0f0f0f;
-    color: #fff;
-    /* background-color: #eeeeee; */
-    font-size: 13px;
-    margin :0;
-    border: 1px solid #666;
-    text-overflow: ellipsis; 
-    display: -webkit-box;
-    -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
-    overflow-y: hidden;
-   
+    /* border: 1px solid #7568f0; */
 }
 .des_poster img {
-    width: 700px;
+    width:1000px;
     height: 380px;
     z-index: 30;
     bottom: 100%;
     float:right;
  }
- #toggleButton{
-     width: 80px;
-     height: 25px;
-     font-size: 11px;
-     border-radius: 6px;
-     background-color: #333333;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     border: 1px solid #ce5bf1;
-    }
-#toggleButton span,
-#closeButton span{
-   width: 100%;
-   height: 80%;
-   color: #fff;
-   margin:0 auto;
-   border: 1px solid #ceabd8;
-   /* display: block */
-   /* justify-content: center;
-   align-items: center; */
-}
-#toggleButton img{
-   font-size: 11px;
-   padding-top: 5px;
-   border: 1px solid #080808;
+
+/* 시놉시스 기본 설정 */
+#dropdown {
+    width: 90%;
+    background: linear-gradient(45deg, #090724,#0b2921); 
+    backdrop-filter: blur(20px); /* 블러 효과 적용 */
+    margin: 0 20px 0 10px;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    /* border: 1px solid #f78030; */
 }
 
- #closeButton{
-    width: 80px;
-    height: 25px;
-    font-size: 11px;
-    border-radius: 6px;
-    background-color: #333333;
-    display: flex;
-    border: 1px solid #ce5bf1;
-    margin-left: 200px;
-    display: none;    
+.dropdown-content p {
+    color: #dfd9d9;
+    font-size: 13px;
+    margin: 0;
+    padding: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 6; 
+    /* 초기 6줄만 표시 */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    position: relative;
+    /* border: 1px solid #666; */
+}
 
- }
-
+/* 더보기 버튼과 닫기 버튼 스타일 */
+#toggleButton, #closeButton {
+    background: none;
+    border: none;
+    color: #b4b4b3;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
+}
 
 
 

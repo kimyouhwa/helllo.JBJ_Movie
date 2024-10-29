@@ -357,7 +357,7 @@ a{
    
     color: gray; /* 회색으로 변경 */
 }
-  .bg1{background: url(img/swiper/k2.webp);}
+  .bg1{background: url(img/swiper/w1.webp);}
   .bg2{background: url(img/swiper/k1.webp);}
   .bg3{background: url(img/swiper/k3.webp);}
   .bg4{background: url(img/swiper/k4.webp);}
@@ -367,6 +367,7 @@ a{
   .bg8{background: url(img/swiper/k5.webp);}
   .bg9{background: url(img/swiper/k4.webp);}
   .bg10{background: url(img/swiper/k5.webp);}
+  /* ------------------------------------- */
   .bg11{background: url(img/swiper/h1.webp)}
   .bg12{background: url(img/swiper/h2.webp)}
   .bg13{background: url(img/swiper/h3.webp)}
@@ -377,6 +378,7 @@ a{
   .bg18{background: url(img/swiper/h8.webp)}
   .bg19{background: url(img/swiper/h2.webp)}
   .bg20{background: url(img/swiper/h1.webp)}
+  /* ------------------------------------- */
   .bg21{background: url(img/swiper/c1.webp)}
   .bg22{background: url(img/swiper/c2.webp)}
   .bg23{background: url(img/swiper/c3.webp)}
@@ -386,17 +388,19 @@ a{
   .bg27{background: url(img/swiper/c1.webp)}
   .bg28{background: url(img/swiper/c3.webp)}
   .bg29{background: url(img/swiper/c2.webp)}
-  .bg30{background: url(img/swiper/a1.webp)}
+  .bg30{background: url(img/swiper/c5.webp)}
+  /* ------------------------------------- */
   .bg31{background: url(img/swiper/a2.webp)}
   .bg32{background: url(img/swiper/a3.webp)}
   .bg33{background: url(img/swiper/a4.webp)}
   .bg34{background: url(img/swiper/a5.webp)}
-  .bg35{background: url(img/swiper/a2.webp)}
-  .bg36{background: url(img/swiper/a1.webp)}
+  .bg35{background: url(img/swiper/a1.webp)}
+  .bg36{background: url(img/swiper/a2.webp)}
   .bg37{background: url(img/swiper/a3.webp)}
   .bg38{background: url(img/swiper/a4.webp)}
   .bg39{background: url(img/swiper/a5.webp)}
   .bg40{background: url(img/swiper/a1.webp)}
+  /* ------------------------------------- */
   .bg41{background: url(img/swiper/m1.webp)}
   .bg42{background: url(img/swiper/m2.webp)}
   .bg43{background: url(img/swiper/m3.webp)}

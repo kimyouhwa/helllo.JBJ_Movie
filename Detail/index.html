@@ -6,8 +6,6 @@
     <title>Detail</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="/Detail/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script defer src="/Detail/script.js"></script>
@@ -39,9 +37,10 @@
 <div class="overlay" id="overlay"></div>
 <div class="popup" id="popup">
     <span id="closeBtn" class="close-btn">&times;</span>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/w6FbiayT3N4?si=HPN-jwtMAW1kr7GO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="720" height="576" id="videoFrame" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  
 </div>
-<!-- 비디오 팝업 -->
+<!-- 비디오 팝업 end -->
 <span id="favoriteBtn" onclick="toggleFavorite()">
     <img src="/Detail/img/icon/favorite_24dp_5F6368_FILL0_wght400_GRAD0_opsz24.svg">
     <p>&nbsp&nbsp찜 </p> 
@@ -69,32 +68,55 @@
   <div id="tb_container">
     <button id="toggleButton"><span>더보기</span><img src="/Detail/img/icon/down arrow.svg"></button>
     <div id="dropdown" class="dropdown-content" >
-        <p>화재로 어머니를 잃은 11살 소년 ‘마히토’는 <br>아버지와 함께 어머니의 고향으로 간다.<br> 어머니에 대한 그리움과 새로운 보금자리에 <br>적응하느라 힘들어하던 ‘마히토’ 앞에 정체를 <br>알 수 없는 왜가리 한 마리가 나타나고,<br> 저택에서 일하는 일곱 할멈으로부터<br> 왜가리가 살고 있는 탑에 대한 신비로운<br> 이야기를 듣게 된다. 그러던 어느 날,<br> ‘마히토’는 사라져버린 새엄마 ‘나츠코’를 찾기<br> 위해 탑으로 들어가고, 왜가리가<br> 안내하는 대로 이세계(異世界)의 문을 통과하는데…!<br>Lorem, ipsum dolor sit amet consectetur
-        <button id="closeButton"><span>닫기</span><img src="/Detail/img/icon/up arrow.svg" alt=""></button>
+        <p id="synopsisText">자신의 진정한 힘을 미처 발견하지 못한 '엘파바'(신시아 에리보).
+            자신의 진정한 본성을 아직 발견하지 못한 ‘글린다'(아리아나 그란데).
+            
+            전혀 다른 두 사람은 마법 같은 우정을 쌓아간다.
+            그러던 어느 날, '마법사'
+            <br>
+            의 초대를 받아 에메랄드 시티로 가게 되고
+            운명은 예상치 못한 위기와 모험으로 두 사람을 이끄는데…
+            
+            마법 같은 운명의 시작, 누구나 세상을 날아오를 수 있어…!<br>Lorem, ipsum dolor sit amet consectetur
+        </p>
+        <button id="closeButton" style="display: none;"><span>닫기</span><img src="/Detail/img/icon/up arrow.svg" alt=""></button>
     </div>
   </div>
-<div class="des_poster"><img src="/Detail/img/des_poster/wecked_3129.png" alt=""></div>
+<div class="des_poster"><img src="/Detail/img/des_poster/wkd.jpg"alt="Poster Image"></div>
 </div>
 <!-- footer -->
  <footer id="footer_box"></footer>
 <!--js시놉시스 -->
 <script>
-    document.getElementById('toggleButton').addEventListener('click', function() {
-    const dropdown = document.getElementById('dropdown');
-    dropdown.style.display = dropdown.style.display === 'none' ? 'block' : 'none';
-});
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropdown = document.getElementById('dropdown');
+        const toggleButton = document.getElementById('toggleButton');
+        const closeButton = document.getElementById('closeButton');
+        const synopsisText = document.getElementById('synopsisText');
 
-document.getElementById('closeButton').addEventListener('click', function() {
-    document.getElementById('dropdown').style.display = 'none';
-});
+        // 더보기 버튼 클릭 시 높이 조절 및 버튼 전환
+        toggleButton.addEventListener('click', function() {
+            synopsisText.style.webkitLineClamp = 'none'; // 전체 텍스트 보이기
+            toggleButton.style.display = 'none'; // 더보기 버튼 숨기기
+            closeButton.style.display = 'inline-block'; // 닫기 버튼 표시
+        });
+
+        // 닫기 버튼 클릭 시 다시 6줄만 보이도록 조정 및 버튼 전환
+        closeButton.addEventListener('click', function() {
+            synopsisText.style.webkitLineClamp = '6'; // 다시 6줄로 제한
+            toggleButton.style.display = 'inline-block'; // 더보기 버튼 보이기
+            closeButton.style.display = 'none'; // 닫기 버튼 숨기기
+        });
+    });
 </script>
 
 <!-- share popup script-->
 <script>
-    document.getElementById("shareBtn").onclick = function() {
-    const popup = document.getElementById("sharePopup");
-    popup.style.display = popup.style.display === "none" ? "block" : "none";
-};
+
+document.getElementById("shareBtn").onclick = () => {
+        const popup = document.getElementById("sharePopup");
+        popup.style.display = popup.style.display === "none" ? "block" : "none";
+    };
 
 function shareOnFacebook() {
     const url = 'https://www.facebook.com'; // 공유할 URL
@@ -126,23 +148,27 @@ function toggleFavorite() {
         // 팝업과 오버레이 요소 가져오기
         const popup = document.getElementById("popup");
         const overlay = document.getElementById("overlay");
-    
+        const videoFrame = document.getElementById("videoFrame");
         // 버튼 클릭 시 팝업과 오버레이 표시
         document.getElementById("purchaseBtn").addEventListener("click", function() {
-            popup.style.display = "block";
-            overlay.style.display = "block";
+            videoFrame.src = "https://www.youtube.com/embed/w6FbiayT3N4?autoplay=1&mute=1&controls=0";
+           popup.style.display = "block";
+             overlay.style.display = "block";
         });
+
     
         // 닫기 버튼 클릭 시 팝업과 오버레이 숨김
         document.getElementById("closeBtn").addEventListener("click", function() {
             popup.style.display = "none";
             overlay.style.display = "none";
+            videoFrame.src = ""; // src를 비워 비디오 정지
         });
     
         // 오버레이 클릭 시 팝업과 오버레이 숨김
         overlay.addEventListener("click", function() {
             popup.style.display = "none";
-            overlay.style.display = "none";
+            overlay.style.display = "none"; // 비디오정지 
+            videoFrame.src = ""; // src를 비워 비디오 정지
         });
     </script>
    
